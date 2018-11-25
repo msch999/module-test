@@ -1,32 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.msch.module-test</groupId>
-  <artifactId>the-parent</artifactId>
-  <packaging>pom</packaging>
-  <version>current-SNAPSHOT</version>
-  <name>${project.groupId}-${project.artifactId}</name>
+    <modelVersion>4.0.0</modelVersion>
 
-  <properties>
-    <assertj.version>3.8.0</assertj.version>
-    <jupiter.version>5.0.0</jupiter.version>
-<!--
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <runtime.dir>${project.artifactId}-${project.version}</runtime.dir>
-    <project.version>current-SNAPSHOT</project.version>
-    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-    <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-    <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
-    <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
-    <maven-failsafe-plugin.version>2.20.1</maven-failsafe-plugin.version>
-    <findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
-    <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
-    <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
-    <owasp-maven-plugin.version>3.0.2</owasp-maven-plugin.version>
--->
-  </properties>
+    <groupId>de.msch.module-test</groupId>
+    <artifactId>project-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>current-SNAPSHOT</version>
+    <name>${project.groupId}-${project.artifactId}</name>
+
+    <properties>
+        <assertj.version>3.8.0</assertj.version>
+        <jupiter.version>5.0.0</jupiter.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.msch.module-test</groupId>
+                <artifactId>project-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
