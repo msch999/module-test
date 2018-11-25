@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.msch.module-test</groupId>
+	<groupId>my-group</groupId>
 	<artifactId>project-B</artifactId>
 	<packaging>jar</packaging>
 	<version>current-SNAPSHOT</version>
 	<name>${project.groupId}-${project.artifactId}</name>
 
 	<parent>
-		<groupId>de.msch.module-test</groupId>
-		<artifactId>project-parent</artifactId>
+		<groupId>my-group</groupId>
+		<artifactId>the-parent</artifactId>
 		<version>current-SNAPSHOT</version>
 		<relativePath>../project-parent/pom.xml</relativePath>
 	</parent>
